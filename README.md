@@ -1,4 +1,4 @@
-# Spark Structured Stream Example
+# Spark Structured Stream Example wit Kafka
 This is an example of a spark structured stream receiving records from kafka, extracting its values, timestamps and keys
 and encoding them to java objects.
 
