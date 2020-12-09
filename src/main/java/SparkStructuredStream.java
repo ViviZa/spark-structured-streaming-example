@@ -49,7 +49,7 @@ public class SparkStructuredStream {
         final RelationalGroupedDataset groupedByDataset =
                 selectedDataset.withWatermark("KAFKA_TIMESTAMP", "1 minutes")
                         .groupBy(selectedDataset.col("TOPIC_KEY"),
-                                window(selectedDataset.col("KAFKA_TIMESTAMP"), "1 minute"));
+                                window(selectedDataset.col("KAFKA_TIMESTAMP"), "1 minute")); //TODO: make windowing and grouping work
 
 
         groupedByDataset.df().writeStream()
